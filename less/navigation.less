@@ -1,1 +1,59 @@
 // Navigation Styles here
+nav {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0;
+  //margin wont work on fixed position unless left and right set to 0 
+  margin: 0 auto; 
+  width: 100%;
+  height: 90px;
+  .flex-display();
+  align-items: center;
+  justify-content: center;
+  background: @main-bg;
+  border-bottom: 1.5px dashed @navigation-border;
+  
+  @media @mobile {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  h1{
+    text-align: center;
+
+    @media @mobile {
+      font-size: 3.2rem; 
+    }
+  }
+  .nav-links {
+    .flex-display();
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    width: 50%;
+
+    @media @mobile {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    a {
+      text-decoration: none;
+      color: @font-color;
+      font-size: 1.6rem;
+      margin-right: 5%;
+      &:hover {
+        color: @button-bg;
+      }
+      @media @mobile {
+        margin: 0;
+      }
+    }
+
+    
+  }
+
+  
+
+}

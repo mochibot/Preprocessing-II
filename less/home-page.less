@@ -1,4 +1,18 @@
 .home {
+  margin: 90px auto 0 auto;
+
+  @media @mobile {
+    margin: 0 2%;
+  }
+
+  header {
+    border-bottom: 1.5px dashed @navigation-border;
+    padding-bottom: 1rem;
+
+    h2 {
+      margin-top: 2rem;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,19 +20,34 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%
+      }
+
       img {
         border-radius: 10px;
+        
+        @media @mobile {
+          width: 100%
+        }
       }
     }
   }
@@ -42,8 +71,16 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%
+    }
+
     img {
       border-radius: 10px;
+
+      @media @mobile {
+        width: 100%
+      }
     }
   }
 
@@ -53,9 +90,49 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 4% 10%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 100%;
+      }
+      
+      .btn {
+        .button-color(@button-bg);
+        .button-style(white; 10px);
+        width: 75%;
+
+        @media @mobile {
+          width: 100%;
+          font-size: 1.8rem;
+        }
+      }
     }
+  }
+  .content-sign-up {
+    margin: 2% 20%;
+  
+    @media @mobile {
+      margin: 0 10%;
+      width: 100%;
+    }
+
+      h2 {
+        .animation(fade-in 1s linear infinite alternate);
+      }
+
+      select, input, textarea {
+        width: 350px;
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem;
+      }
   }
 }// home
