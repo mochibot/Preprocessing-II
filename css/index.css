@@ -246,7 +246,7 @@ nav .nav-links a:hover {
 }
 @media screen and (max-width: 500px) {
   .home {
-    margin: 90px 3% 0 3%;
+    margin: 0 2%;
   }
 }
 .home header {
