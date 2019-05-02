@@ -1,1 +1,41 @@
 // Mixins in here
+
+//flex container
+.flex-display(@display: flex) {
+  display: @display;
+}
+
+//buttons 
+.button-color(@btn-color) {
+  background: @btn-color;
+  &:hover {
+    background:darken(@btn-color,8%);
+    transition: all 0.2s ease;
+  }
+}
+
+.button-style(@text-color, @radius) {
+  display: block;
+  border-radius: @radius;
+  font-size: 1.6rem;
+  color: @text-color;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+//animation
+.keyframes(@name; @arguments) {
+  @keyframes @name { 
+    @arguments(); 
+  }
+}
+
+.animation(@arguments) {
+	animation: @arguments;
+}
+
+.keyframes(fade-in;{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  });
