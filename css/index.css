@@ -177,6 +177,7 @@ img {
 }
 nav {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -212,7 +213,7 @@ nav .nav-links {
 }
 @media screen and (max-width: 500px) {
   nav .nav-links {
-    width: 100%;
+    width: 90%;
     justify-content: space-between;
   }
 }
@@ -246,7 +247,7 @@ nav .nav-links a:hover {
 }
 @media screen and (max-width: 500px) {
   .home {
-    margin: 0 2%;
+    margin: 90px 2% 0 2%;
   }
 }
 .home header {
@@ -385,4 +386,23 @@ nav .nav-links a:hover {
   width: 350px;
   font-size: 1.6rem;
   margin-bottom: 1.6rem;
+}
+.home .content-sign-up button {
+  background: #17A2B8;
+  display: block;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  width: 100px;
+  margin-bottom: 1.6rem;
+}
+.home .content-sign-up button:hover {
+  background: #128294;
+  transition: all 0.2s ease;
+}
+.home .content-sign-up button:focus {
+  outline: none;
 }
